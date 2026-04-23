@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% block content %}
+    <main>
+    <head>
+        <h1>LaRutaDelAhorro</h1>
+    </head>
+    <h2>Bienvenidos a LaRutaDelAhorro</h2>
+        <div style="margin-top: 15px;">
+            
+            <button class="btn" onclick="abrirLogin()">
+                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+            </button>
+
+            <button class="btn" onclick="abrirRegistro()">
+                <i class="fas fa-user-plus"></i> Registrarse
+            </button>
+
+        </div>
+    </main>
+    <div>
+        <div id="modalRegistro" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h2>Registrarse</h2>
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label for="registroNombre">Nombre:</label>
+                        <input type="text" id="registroNombre" name="registroNombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registroEmail">Correo Electrónico:</label>
+                        <input type="email" id="registroEmail" name="registroEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registroPassword">Contraseña:</label>
+                        <input type="password" id="registroPassword" name="registroPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+    {% endblock %}
+</body>
+</html>

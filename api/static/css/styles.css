@@ -1,0 +1,165 @@
+/* =================================
+  Reset and Basic Styles
+  Eliminate margins, paddings, and set box-sizing to border-box for consistent styling across browsers.
+================================= */
+* {
+    margin: 0;                  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================================
+  Body and Container Styles
+  Set a background color, font family, and center the container on the page.
+================================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cc5ece;
+    color: #7e016f;
+}
+
+/* =================================
+  Encabezado Styles
+  Barra superior de navegacion
+================================= */
+header {
+    background-color: #8c157e;
+    color: rgb(223, 98, 211);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* =================================
+  Navegacion Styles
+  Estilos para el menu de navegacion
+================================= */
+nav {
+    background-color: #cc5ece;
+    padding: 10px;
+}
+
+nav a {
+    color: #bd26ab;
+    text-decoration: none;
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #7e016f;
+}
+
+/* =================================
+  Main Content Styles
+  Estilos para el contenido principal de la pagina
+================================= */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #ec70de;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #7f3176;
+    padding-bottom: 10px;
+}
+
+/* =================================
+  Footer Styles
+  Estilos para el pie de pagina
+================================= */
+footer {
+    background-color: #bd46af;
+    color: #7a2970;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* =================================
+  Button Styles
+  Estilos para los botones de la pagina
+================================= */
+.btn {
+    background-color: #7e016f;
+    color: #b762c1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn.hover {
+    background-color: #8b3c82;
+}
+
+
+/* =================================
+  Modal Styles
+  Estilos para los modales de inicio de sesion y registro
+================================= */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #b762c1;
+}   
+
+.modal-content {
+    background-color: #7b0f89;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.close {
+    color: #7f2e78;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: #ec70de;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =================================
+    Animations
+    Agrega animaciones para la apertura y cierre de los modales
+================================= */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}   
+
+.modal{
+    animation: fadeIn 0.3s;
+}   
